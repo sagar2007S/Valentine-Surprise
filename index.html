@@ -432,7 +432,7 @@
             align-items: center;
             justify-content: center;
             animation: fadeIn 0.3s ease;
-            padding: 20px;
+            padding: 60px 20px 20px 20px;
         }
 
         .image-modal.active {
@@ -440,15 +440,20 @@
         }
 
         .image-modal-content {
-            max-width: 90%;
-            max-height: 90vh;
+            max-width: 85%;
+            max-height: 85%;
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             animation: zoomIn 0.4s ease;
         }
 
         .image-modal-content img {
-            width: 100%;
-            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
             object-fit: contain;
             border-radius: 15px;
             box-shadow: 0 25px 70px rgba(255, 107, 157, 0.6),
@@ -458,13 +463,13 @@
 
         .image-close-btn {
             position: absolute;
-            top: -15px;
-            right: -15px;
-            width: 50px;
-            height: 50px;
+            top: -50px;
+            right: -10px;
+            width: 45px;
+            height: 45px;
             background: linear-gradient(135deg, #ff6b9d, #c06c84);
             border-radius: 50%;
-            font-size: 2rem;
+            font-size: 1.8rem;
             cursor: pointer;
             color: white;
             transition: all 0.3s ease;
@@ -473,6 +478,7 @@
             justify-content: center;
             box-shadow: 0 5px 15px rgba(255, 107, 157, 0.5);
             font-weight: bold;
+            z-index: 2001;
         }
 
         .image-close-btn:hover {
@@ -565,6 +571,24 @@
             .note-signature {
                 font-size: 1.5rem;
             }
+
+            /* Image Modal Mobile */
+            .image-modal {
+                padding: 80px 10px 10px 10px;
+            }
+
+            .image-modal-content {
+                max-width: 95%;
+                max-height: 80%;
+            }
+
+            .image-close-btn {
+                top: -60px;
+                right: 0;
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -595,6 +619,16 @@
             .love-note-btn {
                 font-size: 1.3rem;
                 padding: 18px 40px;
+            }
+
+            /* Image Modal Mobile Small */
+            .image-modal {
+                padding: 70px 5px 5px 5px;
+            }
+
+            .image-modal-content {
+                max-width: 98%;
+                max-height: 75%;
             }
         }
     </style>
